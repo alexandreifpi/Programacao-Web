@@ -104,7 +104,7 @@
 <label for="nascimento">Data de Nascimento:</label>
 <input type="date" id="nascimento" name="nascimento" required>
 <br><br>
-``` html 
+``` 
 
 ### Radio
 
