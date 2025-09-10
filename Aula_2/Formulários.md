@@ -24,8 +24,9 @@
 
 ## Atributos da Tag ```<form>```
 
-| Atributo 			| Valor									| Descrição 													|
------------------------------------------------------------------------------------------------------------------------------
-| action			| URL de processamento do formulário. 	| Especifica o destino dos dados do formulário.					|
-| method			| GET ou POST						  	| Especifica o método HTTP para envio do formulário de dados.	|
-| name				| Nome do Formulários				  	| Especifica o nome do formulário.								|
+
+| Atributo | Valor | Descrição |
+|--- |--- | --- |
+| action | URL de processamento do formulário. | Especifica o destino dos dados do formulário. |
+| method | GET ou POST | Especifica o método HTTP para envio do formulário de dados. |
+| name | Nome do Formulários | Especifica o nome do formulário. |
