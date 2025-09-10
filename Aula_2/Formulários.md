@@ -30,3 +30,14 @@
 | action | URL de processamento do formulário. | Especifica o destino dos dados do formulário. |
 | method | GET ou POST | Especifica o método HTTP para envio do formulário de dados. |
 | name | Nome do Formulários | Especifica o nome do formulário. |
+
+## Campos de entrada ```<input>```
+
+- Tipos principais:
+	- text (texto simples)
+	- email (valida formato de e-mail)
+	- password (senha - oculta caracteres)
+	- number (números)
+	- date (mostra o calendário)
+	- radio (seleção de opções)
+
