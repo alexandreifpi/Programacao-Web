@@ -14,15 +14,15 @@
 	- Compras online
 	- Contato e feedback
 
-## Estrutura Básica - Tag ```<form>``` 
+## Estrutura Básica - Tag ``` html <form>```
 
-```
+``` html
 <form action="/processa" method="post">
 	<!-- campos -->
 </form>
-```
+``` 
 
-## Atributos da Tag ```<form>```
+## Atributos da Tag ``` html <form>```
 
 
 | Atributo | Valor | Descrição |
@@ -31,7 +31,7 @@
 | method | GET ou POST | Especifica o método HTTP para envio do formulário de dados. |
 | name | Nome do Formulários | Especifica o nome do formulário. |
 
-## Campos de entrada ```<input>```
+## Campos de entrada ``` html <input>``` 
 
 - Tipos principais:
 	- text (texto simples)
@@ -41,7 +41,7 @@
 	- date (mostra o calendário)
 	- radio (seleção de opções)
 
-### Atributos da Tag ```<input>```
+### Atributos da Tag ``` html <input>``` 
 
 | Atributo | Função/Exemplo |
 | --- | --- |
@@ -54,7 +54,7 @@
 | min / max / maxlength | Define limites de números ou tamanho de texto (min="1" max="100" maxlength="50") |
 | readonly / disabled | readonly = não pode editar, mas enviado; disabled = não pode editar e não enviado |
 
-### Tag ```<label>```
+### Tag ``` html <label>``` 
 
 - Serve para associar um texto descritivo a um campo de formulário.
 - Melhora a usabilidade (o usuário sabe o que deve digitar).
@@ -63,7 +63,7 @@
 
 ### Text
 
-```
+``` html 
 <!-- Texto simples -->
 <label for="nome">Nome:</label>
 <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
@@ -72,43 +72,43 @@
 
 ### Email
 
-```
+``` html 
 <!-- Email -->
 <label for="email">Email:</label>
 <input type="email" id="email" name="email" placeholder="Digite seu email" required>
 <br><br>
-```
+``` 
 
 ### Senha
 
-```
+``` html 
 <!-- Senha -->
 <label for="senha">Senha:</label>
 <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
 <br><br>
-```
+``` 
 
 ### Número
 
-```
+``` html 
 <!-- Número -->
 <label for="idade">Idade:</label>
 <input type="number" id="idade" name="idade" min="1" max="120" required>
 <br><br>
-```
+``` 
 
 ### Data
 
-```
+``` html 
 <!-- Data -->
 <label for="nascimento">Data de Nascimento:</label>
 <input type="date" id="nascimento" name="nascimento" required>
 <br><br>
-```
+``` html 
 
 ### Radio
 
-```
+``` html 
 <!-- Radio (seleção única) -->
 <p>Gênero:</p>
 <input type="radio" id="masculino" name="genero" value="masculino" required>
@@ -118,11 +118,11 @@
 <input type="radio" id="outro" name="genero" value="outro">
 <label for="outro">Outro</label>
 <br><br>
-```
+``` 
 
 ### Checkbox
 
-```
+``` html 
 <!-- Checkbox (seleção múltipla) -->
 <p>Interesses:</p>
 <input type="checkbox" id="tecnologia" name="interesses" value="tecnologia">
