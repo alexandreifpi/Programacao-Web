@@ -41,3 +41,7 @@
 - Revisar HTML e CSS: Fundamentos e boas práticas.
 - Identificar Dificuldades: Problemas comuns dos alunos.
 - Nivelar para Avançar: Preparar para tópicos avançados.
+
+## Inspiração
+
+![Modelo](modelo.png)
