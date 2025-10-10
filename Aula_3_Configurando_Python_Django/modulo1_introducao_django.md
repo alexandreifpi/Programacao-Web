@@ -1,85 +1,124 @@
-# 📗 MÓDULO 1 -- INTRODUÇÃO AO DJANGO
+# 📗 MÓDULO 1 -- INTRODUÇÃO AO DJANGO (Iniciantes Absolutos)
 
 ## 🎯 Objetivo do Módulo
 
-Compreender o que é o Django, como ele se encaixa no desenvolvimento web
-moderno e preparar o ambiente para criar o primeiro projeto Django.
+Aprender o que é Django, configurar o ambiente de desenvolvimento,
+entender o terminal e criar o primeiro projeto Django.
 
 ------------------------------------------------------------------------
 
 ## 🧩 1. O que é Django?
 
-O **Django** é um **framework web em Python**, criado para **acelerar o
-desenvolvimento de aplicações** seguras, escaláveis e bem estruturadas.
+O **Django** é um **framework web feito em Python**. Ele ajuda você a: -
+Criar sites e sistemas web rapidamente; - Organizar melhor o código; -
+Conectar com banco de dados sem escrever SQL manual; - Criar sistemas
+completos com login, formulários e páginas dinâmicas.
 
-Ele segue o padrão **MTV (Model--Template--View)**, uma variação do
-conhecido MVC (Model--View--Controller).
+### 💡 O que é um framework?
 
-### 🌐 Em resumo:
-
--   **Model:** representa os **dados e regras de negócio** (banco de
-    dados).
--   **Template:** é a **parte visual** (HTML exibido ao usuário).
--   **View:** é a **lógica que conecta o modelo e o template**,
-    decidindo o que será exibido.
-
-📘 **Exemplo de fluxo:** 1. O usuário acessa
-`http://localhost:8000/alunos/` 2. A **View** é chamada e busca os dados
-do **Model Aluno** 3. A **View** envia os dados para o **Template** 4. O
-**Template** exibe a lista de alunos em HTML
+É um **conjunto de ferramentas e estruturas** que ajuda você a
+desenvolver mais rápido, evitando reinventar a roda.
 
 ------------------------------------------------------------------------
 
-## ⚙️ 2. Instalando o Ambiente
+## 🧠 2. Como o Django funciona (MTV)
 
-### 🐍 Verificando o Python
+O Django segue o padrão **MTV (Model--Template--View)**:
 
-O Django usa Python 3.10+.
+  -----------------------------------------------------------------------
+  Sigla                     Nome                Função
+  ------------------------- ------------------- -------------------------
+  **M**                     **Model**           Define as tabelas do
+                                                banco de dados (ex:
+                                                alunos, cursos).
 
-No terminal:
+  **T**                     **Template**        Define a parte visual
+                                                (páginas HTML).
 
-``` bash
-python --version
-```
+  **V**                     **View**            Faz a ligação entre Model
+                                                e Template, processando
+                                                os dados e exibindo-os.
+  -----------------------------------------------------------------------
 
-ou, em algumas máquinas:
+### 🧭 Exemplo de funcionamento
 
-``` bash
-python3 --version
-```
-
-Se não tiver o Python instalado, baixe em:\
-🔗 <https://www.python.org/downloads/>
-
-------------------------------------------------------------------------
-
-### 📦 Instalando o pip e virtualenv
-
-O **pip** é o gerenciador de pacotes do Python, e o **virtualenv** cria
-ambientes isolados para cada projeto.
-
-Instale o `virtualenv`:
-
-``` bash
-pip install virtualenv
-```
-
-Crie um ambiente virtual:
-
-``` bash
-virtualenv venv
-```
-
-Ative o ambiente virtual: - **Windows:**\
-`bash   venv\Scripts\activate` - **Linux / macOS:**\
-`bash   source venv/bin/activate`
-
-Você verá `(venv)` no início da linha do terminal --- isso indica que o
-ambiente está ativo.
+1.  Usuário acessa `http://localhost:8000/alunos/`\
+2.  A **View** busca os dados do **Model**\
+3.  A **View** envia os dados para o **Template**\
+4.  O **Template** exibe os dados na tela
 
 ------------------------------------------------------------------------
 
-### ⚙️ Instalando o Django
+## 🖥 3. O que é o Terminal / Linha de Comando
+
+O **terminal** (ou linha de comando) é uma ferramenta que permite
+**dizer para o computador o que fazer digitando comandos**, sem usar o
+mouse.
+
+### 🔹 Windows
+
+-   **Prompt de Comando:** pressione `Win + R`, digite `cmd` e aperte
+    Enter.\
+-   **PowerShell:** pressione `Win + X`, escolha "Windows PowerShell".
+
+### 🔹 VS Code
+
+-   Abra a pasta do projeto no VS Code.
+-   Vá em **Terminal → Novo Terminal**.\
+-   Ele já abre na pasta do projeto e permite digitar comandos.
+
+### 🔹 Comandos básicos
+
+-   `dir` → lista arquivos e pastas no Windows (`ls` no Linux/macOS)\
+-   `cd nome_da_pasta` → entra em uma pasta\
+-   `cd ..` → volta para a pasta anterior\
+-   `mkdir nome_da_pasta` → cria uma nova pasta
+
+> Esses comandos serão usados durante todo o curso.
+
+------------------------------------------------------------------------
+
+## 💾 4. Criando a Pasta do Projeto
+
+No terminal, escolha onde quer criar o projeto e digite:
+
+``` bash
+mkdir curso_django
+cd curso_django
+```
+
+Explicando: - `mkdir curso_django` cria a pasta do projeto\
+- `cd curso_django` entra dentro dela
+
+------------------------------------------------------------------------
+
+## 🧰 5. Criando o Ambiente Virtual
+
+Um **ambiente virtual** isola as bibliotecas do projeto:
+
+``` bash
+python -m venv venv
+```
+
+### Ativando o ambiente
+
+-   **Windows:**
+
+    ``` bash
+    venv\Scripts\activate
+    ```
+
+-   **Linux/macOS:**
+
+    ``` bash
+    source venv/bin/activate
+    ```
+
+O terminal mostrará `(venv)` no começo da linha.
+
+------------------------------------------------------------------------
+
+## 📦 6. Instalando o Django
 
 Com o ambiente ativo:
 
@@ -87,7 +126,7 @@ Com o ambiente ativo:
 pip install django
 ```
 
-Para confirmar:
+Verifique a versão instalada:
 
 ``` bash
 django-admin --version
@@ -95,51 +134,49 @@ django-admin --version
 
 ------------------------------------------------------------------------
 
-## 🚀 3. Criando o Primeiro Projeto
+## 🚀 7. Criando o Primeiro Projeto
 
-No terminal:
+Crie o projeto chamado `escola`:
 
 ``` bash
 django-admin startproject escola
 ```
 
-Isso cria uma pasta chamada `escola` com a seguinte estrutura:
+Estrutura de pastas:
 
-    escola/
-    ├── manage.py
+    curso_django/
+    ├── venv/
     └── escola/
-        ├── __init__.py
-        ├── settings.py
-        ├── urls.py
-        ├── asgi.py
-        └── wsgi.py
+        ├── manage.py
+        └── escola/
+            ├── __init__.py
+            ├── settings.py
+            ├── urls.py
+            ├── asgi.py
+            └── wsgi.py
+
+### Explicação de cada arquivo
+
+  Arquivo                 Função
+  ----------------------- ---------------------------------------------
+  `manage.py`             Comandos administrativos do Django
+  `settings.py`           Configurações do site (idioma, apps, banco)
+  `urls.py`               Define as rotas do site
+  `asgi.py` / `wsgi.py`   Usados pelo servidor web
 
 ------------------------------------------------------------------------
 
-## 🧠 4. Entendendo os Arquivos
+## 🌍 8. Abrindo no VS Code
 
-  -----------------------------------------------------------------------
-  Arquivo                                 Função
-  --------------------------------------- -------------------------------
-  `manage.py`                             Executa comandos
-                                          administrativos (rodar o
-                                          servidor, criar apps, etc.)
-
-  `settings.py`                           Configurações do projeto
-                                          (banco, apps, idioma, timezone,
-                                          etc.)
-
-  `urls.py`                               Roteamento de URLs do projeto
-
-  `asgi.py` / `wsgi.py`                   Ponto de entrada para
-                                          servidores web
-  -----------------------------------------------------------------------
+1.  Abra o VS Code\
+2.  **Arquivo → Abrir Pasta** → selecione `curso_django`\
+3.  Terminal integrado → use para rodar comandos
 
 ------------------------------------------------------------------------
 
-## 🌍 5. Rodando o Servidor
+## 🌐 9. Rodando o Servidor
 
-Dentro da pasta do projeto:
+Entre na pasta `escola` (onde está `manage.py`) e digite:
 
 ``` bash
 python manage.py runserver
@@ -149,35 +186,35 @@ Abra o navegador e acesse:
 
     http://127.0.0.1:8000/
 
-Se aparecer a tela "**The install worked successfully!**", parabéns 🎉
---- o Django está funcionando!
+Se aparecer a tela do Django, está funcionando! 🎉
 
 ------------------------------------------------------------------------
 
-## 🧩 6. Estrutura do Framework MTV
+## 🧩 10. Fluxo MTV
 
-    Usuário -> URL -> View -> Model -> Template -> Navegador
+    Usuário → URL → View → Model → Template → Navegador
 
-📘 **Resumo do fluxo:** 1. A **URL** define qual função (View) será
-executada.\
-2. A **View** interage com o **Model** (dados).\
-3. A **View** envia os dados para o **Template**.\
-4. O **Template** renderiza o HTML que o usuário vê.
+Resumo:\
+- URL escolhe a função da View\
+- View pega dados do Model\
+- View envia dados ao Template\
+- Template mostra ao usuário
 
 ------------------------------------------------------------------------
 
-## 🧪 7. Exercícios do Módulo 1
+## 🧪 11. Exercícios
 
-1.  Explique a diferença entre **projeto** e **aplicativo** no Django.\
-2.  Qual comando é usado para criar um novo projeto?\
-3.  O que o arquivo `settings.py` armazena?\
-4.  Execute o servidor e tire um print da tela inicial do Django.\
-5.  (Prático) Crie um projeto chamado **"meu_site"** e teste se ele roda
-    corretamente.
+1.  Abra o terminal e navegue até uma pasta de sua escolha\
+2.  Crie a pasta `curso_django` e entre nela\
+3.  Crie e ative o ambiente virtual\
+4.  Instale Django\
+5.  Crie o projeto `escola`\
+6.  Rode o servidor e abra a página inicial\
+7.  Escreva no caderno o que faz cada arquivo dentro de `escola/`
 
 ------------------------------------------------------------------------
 
 ✅ **Próximo módulo:**\
 **Módulo 2 -- Criando o Primeiro App Django (alunos)**\
-→ Aprenderemos a criar nosso primeiro aplicativo dentro do projeto,
-configurar URLs e exibir nossa primeira página personalizada.
+→ Vamos criar nosso primeiro aplicativo dentro do projeto, configurar as
+rotas (URLs) e exibir nossa primeira página HTML personalizada.
