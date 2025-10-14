@@ -44,16 +44,13 @@ Isso cria a seguinte estrutura:
 
 ### Explicando cada arquivo do app
 
-  Arquivo         Função
-  --------------- --------------------------------------------------------
-  
-  `__init__.py`   Informa que esta pasta é um pacote Python
-  `admin.py`      Permite registrar modelos para o painel administrativo
-  `apps.py`       Configuração do app
-  `migrations/`   Guarda alterações do banco de dados
-  `models.py`     Define os modelos (tabelas do banco)
-  `tests.py`      Criar testes automáticos (opcional por enquanto)
-  `views.py`      Contém as funções que processam as páginas
+- `__init__.py`   Informa que esta pasta é um pacote Python
+- `admin.py`      Permite registrar modelos para o painel administrativo
+- `apps.py`       Configuração do app
+- `migrations/`   Guarda alterações do banco de dados
+- `models.py`     Define os modelos (tabelas do banco)
+- `tests.py`      Criar testes automáticos (opcional por enquanto)
+- `views.py`      Contém as funções que processam as páginas
 
 ------------------------------------------------------------------------
 
