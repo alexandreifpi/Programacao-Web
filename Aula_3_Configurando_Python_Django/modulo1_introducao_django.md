@@ -40,7 +40,7 @@ O Django segue o padrão **MTV (Model--Template--View)**:
                                                 
   -----------------------------------------------------------------------
 
-### 🧭 Exemplo de funcionamento
+### Exemplo de funcionamento
 
 1.  Usuário acessa `http://localhost:8000/alunos/`\
 2.  A **View** busca os dados do **Model**\
@@ -49,17 +49,18 @@ O Django segue o padrão **MTV (Model--Template--View)**:
 
 ------------------------------------------------------------------------
 
-## 🖥 3. O que é o Terminal / Linha de Comando
+## 3. O que é o Terminal / Linha de Comando
 
-O **terminal** (ou linha de comando) é uma ferramenta que permite
-**dizer para o computador o que fazer digitando comandos**, sem usar o
-mouse.
+O **terminal** (ou linha de comando) é uma ferramenta que permite **dizer para o computador o que fazer digitando comandos**, sem usar o mouse.
 
-### 🔹 Windows
+### Windows
 
--   **Prompt de Comando:** pressione `Win + R`, digite `cmd` e aperte
-    Enter.\
+-   **Prompt de Comando:** pressione `Win + R`, digite `cmd` e aperte Enter.\
 -   **PowerShell:** pressione `Win + X`, escolha "Windows PowerShell".
+
+### Linux
+
+- **Terminal:** pessione o menu do teclado, digite `terminal` e aperte Enter.\
 
 ### 🔹 VS Code
 
@@ -78,7 +79,7 @@ mouse.
 
 ------------------------------------------------------------------------
 
-## 💾 4. Criando a Pasta do Projeto
+## 4. Criando a Pasta do Projeto
 
 No terminal, escolha onde quer criar o projeto e digite:
 
@@ -87,7 +88,8 @@ mkdir curso_django
 cd curso_django
 ```
 
-Explicando: - `mkdir curso_django` cria a pasta do projeto\
+Explicando: 
+- `mkdir curso_django` cria a pasta do projeto\
 - `cd curso_django` entra dentro dela
 
 ------------------------------------------------------------------------
