@@ -3,6 +3,7 @@
 ## 🎯 Objetivo do Módulo
 
 Aprender o que é Django, configurar o ambiente de desenvolvimento, entender o terminal e criar o primeiro projeto Django.
+
 ------------------------------------------------------------------------
 
 ## 🧩 1. O que é Django?
