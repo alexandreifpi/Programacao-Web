@@ -42,9 +42,9 @@ O Django segue o padrão **MTV (Model--Template--View)**:
 
 ### Exemplo de funcionamento
 
-1.  Usuário acessa `http://localhost:8000/alunos/`\
-2.  A **View** busca os dados do **Model**\
-3.  A **View** envia os dados para o **Template**\
+1.  Usuário acessa `http://localhost:8000/alunos/`
+2.  A **View** busca os dados do **Model**
+3.  A **View** envia os dados para o **Template**
 4.  O **Template** exibe os dados na tela
 
 ------------------------------------------------------------------------
@@ -55,24 +55,24 @@ O **terminal** (ou linha de comando) é uma ferramenta que permite **dizer para 
 
 ### Windows
 
--   **Prompt de Comando:** pressione `Win + R`, digite `cmd` e aperte Enter.\
+-   **Prompt de Comando:** pressione `Win + R`, digite `cmd` e aperte Enter.
 -   **PowerShell:** pressione `Win + X`, escolha "Windows PowerShell".
 
 ### Linux
 
-- **Terminal:** pessione o menu do teclado, digite `terminal` e aperte Enter.\
+- **Terminal:** pessione o menu do teclado, digite `terminal` e aperte Enter.
 
 ### 🔹 VS Code
 
 -   Abra a pasta do projeto no VS Code.
--   Vá em **Terminal → Novo Terminal**.\
+-   Vá em **Terminal → Novo Terminal**.
 -   Ele já abre na pasta do projeto e permite digitar comandos.
 
 ### 🔹 Comandos básicos
 
 -   `dir` → lista arquivos e pastas no Windows (`ls` no Linux/macOS)\
--   `cd nome_da_pasta` → entra em uma pasta\
--   `cd ..` → volta para a pasta anterior\
+-   `cd nome_da_pasta` → entra em uma pasta
+-   `cd ..` → volta para a pasta anterior
 -   `mkdir nome_da_pasta` → cria uma nova pasta
 
 > Esses comandos serão usados durante todo o curso.
@@ -89,7 +89,7 @@ cd curso_django
 ```
 
 Explicando: 
-- `mkdir curso_django` cria a pasta do projeto\
+- `mkdir curso_django` cria a pasta do projeto
 - `cd curso_django` entra dentro dela
 
 ------------------------------------------------------------------------
@@ -98,7 +98,7 @@ Explicando:
 
 ### Windows
 
-- Baixar o Python no site https://www.python.org/downloads/windows/
+- Baixar o Python no site **https://www.python.org/downloads/windows/**
 - Durante a instalação, você verá uma janela marcada "Setup". Certifique-se de marcar a caixa "Adicionar Python 3.X ao PATH" ou "Adicionar Python às suas variáveis de ambiente" e clicar em "Instalar Agora".
 
 <img width="650" height="408" alt="image" src="https://github.com/user-attachments/assets/08b53d4a-d9c5-4fc5-ac7c-806252eeca50" />
@@ -108,9 +108,14 @@ Explicando:
 - Primeiro, vamos verificar se você já possui o Python instalado.
 - Abra o terminal e digite o seguinte comando:
 
-```bash
-python3 --version
-Python 3.X.X
+``` bash
+$ python3 --version
+$ Python 3.X.X
+```
+- Se você já tiver o Python instalado, será exibida a versão da sua instalação, caso contrário, você precisará instalá-lo.
+
+ ``` bash
+$ sudo apt install python3
 ```
 
 -------------------------------------------------------------------------
@@ -119,8 +124,30 @@ Python 3.X.X
 
 Um **ambiente virtual** isola as bibliotecas do projeto:
 
+### Windows
+
 ``` bash
 python -m venv venv
+```
+
+### Linux
+
+``` bash
+python3 -m venv myvenv
+```
+
+- Em algumas distribuiçõçes do Linux, você pode receber o seguinte erro:
+
+``` bash
+The virtual environment was not created successfully because ensurepip is not available.  On Debian/Ubuntu systems, you need to install the python3-venv package using the following command.
+   apt install python3-venv
+You may need to use sudo with that command.  After installing the python3-venv package, recreate your virtual environment.
+```
+
+- Caso você receba esse erro, siga as instruções acima e instale o pacote python3-venv:
+
+``` bash
+sudo apt install python3-venv
 ```
 
 ### Ativando o ambiente
@@ -141,9 +168,9 @@ O terminal mostrará `(venv)` no começo da linha.
 
 ------------------------------------------------------------------------
 
-## 📦 6. Instalando o Django
+## 7. Instalando o Django
 
-Com o ambiente ativo:
+Com a sua virtualenv ativa:
 
 ``` bash
 pip install django
@@ -157,7 +184,7 @@ django-admin --version
 
 ------------------------------------------------------------------------
 
-## 🚀 7. Criando o Primeiro Projeto
+## 8. Criando o Primeiro Projeto
 
 Crie o projeto chamado `escola`:
 
@@ -182,14 +209,14 @@ Estrutura de pastas:
 
   Arquivo                 Função
   ----------------------- ---------------------------------------------
-  `manage.py`             Comandos administrativos do Django
+  `manage.py`             Comandos específicos do Django
   `settings.py`           Configurações do site (idioma, apps, banco)
   `urls.py`               Define as rotas do site
   `asgi.py` / `wsgi.py`   Usados pelo servidor web
 
 ------------------------------------------------------------------------
 
-## 🌍 8. Abrindo no VS Code
+## 9. Abrindo no VS Code
 
 1.  Abra o VS Code\
 2.  **Arquivo → Abrir Pasta** → selecione `curso_django`\
@@ -197,7 +224,7 @@ Estrutura de pastas:
 
 ------------------------------------------------------------------------
 
-## 🌐 9. Rodando o Servidor
+## 10. Rodando o Servidor
 
 Entre na pasta `escola` (onde está `manage.py`) e digite:
 
@@ -213,7 +240,7 @@ Se aparecer a tela do Django, está funcionando! 🎉
 
 ------------------------------------------------------------------------
 
-## 🧩 10. Fluxo MTV
+## 10. Fluxo MTV
 
     Usuário → URL → View → Model → Template → Navegador
 
@@ -225,19 +252,12 @@ Resumo:\
 
 ------------------------------------------------------------------------
 
-## 🧪 11. Exercícios
+## 11. Exercícios
 
-1.  Abra o terminal e navegue até uma pasta de sua escolha\
-2.  Crie a pasta `curso_django` e entre nela\
-3.  Crie e ative o ambiente virtual\
-4.  Instale Django\
-5.  Crie o projeto `escola`\
-6.  Rode o servidor e abra a página inicial\
-7.  Escreva no caderno o que faz cada arquivo dentro de `escola/`
+1.  Abra o terminal e navegue até uma pasta de sua escolha
+2.  Crie a pasta `curso_django` e entre nela
+3.  Crie e ative o ambiente virtual
+4.  Instale Django
+5.  Crie o projeto `escola`
+6.  Rode o servidor e abra a página inicial
 
-------------------------------------------------------------------------
-
-✅ **Próximo módulo:**\
-**Módulo 2 -- Criando o Primeiro App Django (alunos)**\
-→ Vamos criar nosso primeiro aplicativo dentro do projeto, configurar as
-rotas (URLs) e exibir nossa primeira página HTML personalizada.
