@@ -46,6 +46,7 @@ Isso cria a seguinte estrutura:
 
   Arquivo         Função
   --------------- --------------------------------------------------------
+  
   `__init__.py`   Informa que esta pasta é um pacote Python
   `admin.py`      Permite registrar modelos para o painel administrativo
   `apps.py`       Configuração do app
