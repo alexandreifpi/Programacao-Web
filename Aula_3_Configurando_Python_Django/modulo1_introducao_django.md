@@ -1,4 +1,4 @@
-# 📗 MÓDULO 1 -- INTRODUÇÃO AO DJANGO (Iniciantes Absolutos)
+# 📗 MÓDULO 1 -- INTRODUÇÃO AO DJANGO
 
 ## 🎯 Objetivo do Módulo
 
