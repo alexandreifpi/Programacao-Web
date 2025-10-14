@@ -6,21 +6,21 @@ Aprender o que é Django, configurar o ambiente de desenvolvimento, entender o t
 
 ------------------------------------------------------------------------
 
-## 🧩 1. O que é Django?
+## 1. O que é Django?
 
-O **Django** é um **framework web feito em Python**. Ele ajuda você a: -
-Criar sites e sistemas web rapidamente; - Organizar melhor o código; -
-Conectar com banco de dados sem escrever SQL manual; - Criar sistemas
-completos com login, formulários e páginas dinâmicas.
+O **Django** é um **framework web feito em Python**. Ele ajuda você a: 
+- Criar sites e sistemas web rapidamente;
+- Organizar melhor o código;
+- Conectar com banco de dados sem escrever SQL manual;
+- Criar sistemas completos com login, formulários e páginas dinâmicas.
 
-### 💡 O que é um framework?
+### O que é um framework?
 
-É um **conjunto de ferramentas e estruturas** que ajuda você a
-desenvolver mais rápido, evitando reinventar a roda.
+É um **conjunto de ferramentas e estruturas** que ajuda você a desenvolver mais rápido, evitando reinventar a roda.
 
 ------------------------------------------------------------------------
 
-## 🧠 2. Como o Django funciona (MTV)
+## 2. Como o Django funciona (MTV)
 
 O Django segue o padrão **MTV (Model--Template--View)**:
 
@@ -37,6 +37,7 @@ O Django segue o padrão **MTV (Model--Template--View)**:
   **V**                     **View**            Faz a ligação entre Model
                                                 e Template, processando
                                                 os dados e exibindo-os.
+                                                
   -----------------------------------------------------------------------
 
 ### 🧭 Exemplo de funcionamento
