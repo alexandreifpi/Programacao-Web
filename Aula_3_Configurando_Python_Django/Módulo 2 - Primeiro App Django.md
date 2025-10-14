@@ -6,7 +6,18 @@ Aprender a criar um aplicativo dentro do projeto Django, configurar URLs, criar 
 
 ------------------------------------------------------------------------
 
-## 1. O que é um App no Django?
+## 1. Sempre lembrar da inicialização do ambiente virtual como primeiro passo
+
+- Adicionar os scripts para ativação do ambiente virtual
+- cd
+- activate
+
+## 2. Apresentar os arquivos criados no Django
+
+- colocar aqui cada arquivo criado pelo django
+- falar o que cada arquivo representa
+
+## 3. O que é um App no Django?
 
 No Django, um **projeto** pode ter vários **apps**. Um **app** é como um módulo do projeto, responsável por uma parte específica, por exemplo:
 
@@ -18,7 +29,7 @@ No Django, um **projeto** pode ter vários **apps**. Um **app** é como um módu
 
 ------------------------------------------------------------------------
 
-## 2. Criando o App "alunos"
+## 4. Criando o App "alunos"
 
 No terminal, estando na pasta do projeto (`curso_django`), digite:
 
@@ -133,7 +144,7 @@ Você verá a mensagem:
 
     Olá! Bem-vindo ao cadastro de alunos.
 
-🎉 Primeira view funcionando!
+Primeira view funcionando! 🎉 
 
 ------------------------------------------------------------------------
 
