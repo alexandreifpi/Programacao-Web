@@ -99,13 +99,23 @@ Explicando:
 ### Windows
 
 - Baixar o Python no site https://www.python.org/downloads/windows/
-- Durante a instalação, você verá uma janela marcada "Setup". Certifique-se de marcar a caixa "Adicionar Python 3.6 ao PATH" ou "Adicionar Python às suas variáveis de ambiente" e clicar em "Instalar Agora".
+- Durante a instalação, você verá uma janela marcada "Setup". Certifique-se de marcar a caixa "Adicionar Python 3.X ao PATH" ou "Adicionar Python às suas variáveis de ambiente" e clicar em "Instalar Agora".
 
 <img width="650" height="408" alt="image" src="https://github.com/user-attachments/assets/08b53d4a-d9c5-4fc5-ac7c-806252eeca50" />
 
+### Linux
+
+- Primeiro, vamos verificar se você já possui o Python instalado.
+- Abra o terminal e digite o seguinte comando:
+
+```bash
+python3 --version
+Python 3.X.X
+```
+
 -------------------------------------------------------------------------
 
-## 🧰 5. Criando o Ambiente Virtual
+## 6. Criando o Ambiente Virtual
 
 Um **ambiente virtual** isola as bibliotecas do projeto:
 
