@@ -6,11 +6,27 @@ Aprender a criar um aplicativo dentro do projeto Django, configurar URLs, criar 
 
 ------------------------------------------------------------------------
 
-## 1. Sempre lembrar da inicialização do ambiente virtual como primeiro passo
+## 1. Inicializar Ambiente
 
-- Adicionar os scripts para ativação do ambiente virtual
-- cd
-- activate
+- Abra o terminal de comandos do Sistema Operacional que você estiver utilizando.
+
+### Windows
+
+```bash
+cd Documents/curso_django
+venv\Scripts\activate
+cd escola
+python manage.py runserver
+```
+ 
+### Linux
+
+```bash
+cd Documents/curso_django
+venv\Scripts\activate
+cd escola
+python manage.py runserver
+```
 
 ## 2. Apresentar os arquivos criados no Django
 
