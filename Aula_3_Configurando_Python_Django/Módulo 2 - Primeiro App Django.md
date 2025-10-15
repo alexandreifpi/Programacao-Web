@@ -23,7 +23,7 @@ python manage.py runserver
 
 ```bash
 cd Documents/curso_django
-venv\Scripts\activate
+source venv/bin/activate
 cd escola
 python manage.py runserver
 ```
