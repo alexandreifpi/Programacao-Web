@@ -30,8 +30,18 @@ python manage.py runserver
 
 ## 2. Apresentar os arquivos criados no Django
 
-- colocar aqui cada arquivo criado pelo django
-- falar o que cada arquivo representa
+Estrutura de pastas:
+
+    curso_django/
+    ├── venv/
+    └── escola/
+        ├── manage.py
+        └── escola/
+            ├── __init__.py
+            ├── settings.py
+            ├── urls.py
+            ├── asgi.py
+            └── wsgi.py
 
 ## 3. O que é um App no Django?
 
