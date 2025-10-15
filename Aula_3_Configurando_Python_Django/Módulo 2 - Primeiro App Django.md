@@ -43,6 +43,18 @@ Estrutura de pastas:
             ├── asgi.py
             └── wsgi.py
 
+### Explicação de cada arquivo
+
+| Arquivo | Função |
+|---|---|
+| `manage.py` | Comandos específicos do Django |
+| `settings.py` | Configurações do site (idioma, apps, banco) |
+| `urls.py` | Define as rotas do site |
+| `asgi.py` / `wsgi.py` | Usados pelo servidor web |
+
+------------------------------------------------------------------------
+
+
 ## 3. O que é um App no Django?
 
 No Django, um **projeto** pode ter vários **apps**. Um **app** é como um módulo do projeto, responsável por uma parte específica, por exemplo:
