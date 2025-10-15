@@ -103,7 +103,7 @@ Isso cria a seguinte estrutura:
 
 ------------------------------------------------------------------------
 
-## 3. Registrando o App no Projeto
+## 5. Registrando o App no Projeto
 
 Abra o arquivo `settings.py` (em `escola/escola/settings.py`) e adicione
 o app na lista `INSTALLED_APPS`:
@@ -122,7 +122,7 @@ INSTALLED_APPS = [
 
 ------------------------------------------------------------------------
 
-## 4. Criando a Primeira View
+## 6. Criando a Primeira View
 
 No arquivo `views.py` do app `alunos`, crie uma função simples:
 
@@ -139,7 +139,7 @@ def home(request):
 
 ------------------------------------------------------------------------
 
-## 5. Configurando a URL do App
+## 7. Configurando a URL do App
 
 Crie um arquivo `urls.py` dentro da pasta `alunos` (ainda não existe) e adicione:
 
@@ -166,7 +166,7 @@ urlpatterns = [
 
 ------------------------------------------------------------------------
 
-## 6. Testando a Primeira Página
+## 8. Testando a Primeira Página
 
 No terminal, rode o servidor:
 
@@ -186,7 +186,7 @@ Primeira view funcionando! 🎉
 
 ------------------------------------------------------------------------
 
-## 7. Criando Templates HTML
+## 9. Criando Templates HTML
 
 Para exibir páginas HTML em vez de texto simples:
 
@@ -228,14 +228,10 @@ página HTML.
 
 ------------------------------------------------------------------------
 
-## 8. Exercícios do Módulo
+## 10. Exercícios do Módulo
 
 1.  Crie outro app chamado `cursos` e teste uma view simples.
-2.  Crie um template para a view do app `alunos` e adicione um parágrafo
-    com o seu nome.
-3.  Altere a URL do app `alunos` para `alunos/home/` e teste no
-    navegador.
-4.  Experimente criar outro arquivo HTML e renderizá-lo a partir de uma
-    nova view.
+2.  Crie um template para a view do app `cursos` e adicione um parágrafo
+    com o nome do seu curso.
 
 ------------------------------------------------------------------------
