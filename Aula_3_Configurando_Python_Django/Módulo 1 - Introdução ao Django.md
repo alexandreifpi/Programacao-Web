@@ -23,8 +23,6 @@ O **Django** é um **framework web feito em Python**. Ele ajuda você a:
 ## 2. Como o Django funciona (MTV)
 
 O Django segue o padrão **MTV (Model--Template--View)**:
-
-  -------------------------
   
   | Sigla | Nome | Função |
   |---|---|---|
