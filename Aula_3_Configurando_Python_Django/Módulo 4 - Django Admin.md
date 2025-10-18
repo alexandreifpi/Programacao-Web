@@ -70,11 +70,10 @@ http://127.0.0.1:8000/admin
 
 ```python
 from django.contrib import admin
-from .models import Aluno, Professor, Curso
+from .models import Aluno, Professor
 
 admin.site.register(Aluno)
 admin.site.register(Professor)
-admin.site.register(Curso)
 ```
 
 ---
