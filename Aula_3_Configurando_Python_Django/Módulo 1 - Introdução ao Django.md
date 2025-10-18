@@ -55,20 +55,29 @@ O **terminal** (ou linha de comando) é uma ferramenta que permite **dizer para 
 
 ### Windows
 
--   **Prompt de Comando:** pressione `Win + R`, digite `cmd` e aperte Enter.
--   **PowerShell:** pressione `Win + X`, escolha "Windows PowerShell".
+-   **Prompt de Comando:** pressione `Win + R`, digite `cmd` e aperte `Enter`.
+-   **PowerShell:** pressione `Win + X`, escolha `Windows PowerShell`.
 
 ### Linux
 
-- **Terminal:** pessione o menu do teclado, digite `terminal` e aperte Enter.
+- **Terminal:** pessione o menu do teclado, digite `terminal` e aperte `Enter`.
 
-### 🔹 VS Code
+### Instalação do VSCode
+
+- Baixar o VSCode no site oficial para a pasta `Downloads`.
+
+```bash
+cd Downloads
+sudo apt install ./nome_do_arquivo.deb
+```
+
+### VS Code
 
 -   Abra a pasta do projeto no VS Code.
 -   Vá em **Terminal → Novo Terminal**.
 -   Ele já abre na pasta do projeto e permite digitar comandos.
 
-### 🔹 Comandos básicos
+### Comandos básicos
 
 -   `dir` → lista arquivos e pastas no Windows (`ls` no Linux/macOS)\
 -   `cd nome_da_pasta` → entra em uma pasta
@@ -133,7 +142,7 @@ python -m venv venv
 ### Linux
 
 ``` bash
-python3 -m venv myvenv
+python3 -m venv venv
 ```
 
 - Em algumas distribuiçõçes do Linux, você pode receber o seguinte erro:
@@ -244,10 +253,10 @@ Se aparecer a tela do Django, está funcionando! 🎉
 
     Usuário → URL → View → Model → Template → Navegador
 
-Resumo:\
-- URL escolhe a função da View\
-- View pega dados do Model\
-- View envia dados ao Template\
+Resumo:
+- URL escolhe a função da View
+- View pega dados do Model
+- View envia dados ao Template
 - Template mostra ao usuário
 
 ------------------------------------------------------------------------
