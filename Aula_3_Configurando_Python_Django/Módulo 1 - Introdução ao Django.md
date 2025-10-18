@@ -24,20 +24,14 @@ O **Django** é um **framework web feito em Python**. Ele ajuda você a:
 
 O Django segue o padrão **MTV (Model--Template--View)**:
 
-  -----------------------------------------------------------------------
-  Sigla                     Nome                Função
-  ------------------------- ------------------- -------------------------
-  **M**                     **Model**           Define as tabelas do
-                                                banco de dados (ex:
-                                                alunos, cursos).
-
-  **T**                     **Template**        Define a parte visual
-                                                (páginas HTML).
-
-  **V**                     **View**            Faz a ligação entre Model
-                                                e Template, processando
-                                                os dados e exibindo-os.
-                                                
+  -------------------------
+  
+  | Sigla | Nome | Função |
+  |---|---|---|
+  | **M** | **Model** | Define as tabelas do banco de dados (ex: alunos, cursos). |
+  | **T** | **Template** | Define a parte visual (páginas HTML). |
+  | **V** | **View** | Faz a ligação entre Model e Template, processando os dados e exibindo-os. |
+  
   -----------------------------------------------------------------------
 
 ### Exemplo de funcionamento
