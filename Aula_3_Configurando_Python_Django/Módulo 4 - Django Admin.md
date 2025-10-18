@@ -230,16 +230,14 @@ Essas ações aparecem em um menu no topo da listagem do admin.
 
 ---
 
-## 10. 💡 Desafios práticos
-1. Crie uma ação personalizada para **marcar alunos como inativos**.  
-2. Use `fieldsets` para organizar o formulário de professores.  
-3. Instale o Jazzmin e altere o título e cor do painel.  
-4. Crie um grupo de usuários com permissão apenas para visualizar dados.  
-5. Faça uma coluna no admin mostrando se o aluno é maior de idade.
+## 10. Desafios práticos
+1. Use `fieldsets` para organizar o formulário de professores. 
+2. Crie um grupo de usuários com permissão apenas para visualizar dados.  
+3. Faça uma coluna no admin mostrando se o aluno é maior de idade.
 
 ---
 
-## ✅ Resumo do módulo
+## Resumo do módulo
 | Recurso | Função |
 |----------|--------|
 | `list_display` | Define colunas na listagem |
