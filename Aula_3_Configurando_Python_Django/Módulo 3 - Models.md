@@ -21,8 +21,8 @@ Essas informações não podem ficar “no ar” — elas precisam ser **guardad
 
 ## 2. O que é um banco de dados?
 
-Um **banco de dados (database)** é como um **grande armário digital**, cheio de gavetas (tabelas).  
-Cada gaveta guarda um tipo de informação, como:
+- Um **banco de dados (database)** é como um **grande armário digital**, cheio de gavetas (tabelas).  
+- Cada gaveta guarda um tipo de informação, como:
 
 | Tabela | O que guarda | Exemplo de dados |
 |--------|---------------|------------------|
@@ -31,7 +31,7 @@ Cada gaveta guarda um tipo de informação, como:
 | Turma | Turmas da escola | 1º Ano A, 2º Ano B |
 | Prova | Informações das provas | data, nota, matéria |
 
-Assim, quando o sistema precisa buscar os alunos da turma “1º Ano A”, ele sabe exatamente onde procurar: **na tabela de alunos, filtrando pela turma**.
+Assim, quando o sistema precisa buscar os alunos da turma **1º Ano A**, ele sabe exatamente onde procurar: **na tabela de alunos, filtrando pela turma**.
 
 ---
 
@@ -57,21 +57,23 @@ Aqui temos **3 registros**, representando 3 alunos.
 
 ## 4. Como o Django se conecta ao banco de dados
 
-O Django utiliza algo chamado **ORM (Object-Relational Mapper)**.
+- O Django utiliza algo chamado **ORM (Object-Relational Mapper)**.
 
-Em vez de escrever comandos complicados em SQL, você cria **classes em Python**, e o Django **traduz automaticamente** para SQL.
+- Em vez de escrever comandos complicados em SQL, você cria **classes em Python**, e o Django **traduz automaticamente** para SQL.
 
 Isso significa que:
 - Criar uma **classe** = Criar uma **tabela**
 - Criar um **atributo** = Criar uma **coluna**
 - Criar um **objeto (instância)** = Criar um **registro**
 
-💬 Exemplo:
-```python
+Exemplo:
+
+``` python
 aluno = Aluno(nome="João", idade=17, cidade="Picos", curso="Redes")
 aluno.save()
 ```
-Esse código cria um **novo registro na tabela `alunos_aluno`** dentro do banco de dados.
+
+- Esse código cria um **novo registro na tabela `alunos_aluno`** dentro do banco de dados.
 
 ---
 
