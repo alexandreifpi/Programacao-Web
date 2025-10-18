@@ -15,6 +15,7 @@ Aprender a criar um aplicativo dentro do projeto Django, configurar URLs, criar 
 ```bash
 cd Documents/curso_django
 venv\Scripts\activate
+
 cd escola
 python manage.py runserver
 ```
@@ -24,6 +25,7 @@ python manage.py runserver
 ```bash
 cd Documents/curso_django
 source venv/bin/activate
+
 cd escola
 python manage.py runserver
 ```
