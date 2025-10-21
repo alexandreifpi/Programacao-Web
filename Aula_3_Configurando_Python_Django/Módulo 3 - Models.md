@@ -198,6 +198,6 @@ Cada coluna do model aparece como campo da tabela.
 
 ---
 
-## 🚀 Próximo passo
+## Próximo passo
 
 No **Módulo 4**, veremos como **visualizar, adicionar e editar** esses dados diretamente pelo **Django Admin**.
