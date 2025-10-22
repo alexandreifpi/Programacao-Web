@@ -83,8 +83,6 @@ admin.site.register(Professor)
 - Você pode definir **quais colunas aparecem** e como o Django deve exibir os dados:
 
 ```python
-admin.site.register(Aluno)
-
 class AlunoAdmin(admin.ModelAdmin):
     list_display = ('id', 'nome', 'idade', 'cidade', 'curso')
     list_display_links = ('nome',)
@@ -93,6 +91,7 @@ class AlunoAdmin(admin.ModelAdmin):
     ordering = ('nome',)
     list_per_page = 10
     readonly_fields = ('id',)
+admin.site.register(Aluno, AlunoAdmin)
 ```
 
 ### Explicando cada opção
