@@ -255,11 +255,11 @@ alunos/
         <label>Nome:</label><br>
         <input type="text" name="nome" value="{{ aluno.nome }}"><br><br>
 
-        <label>Email:</label><br>
-        <input type="email" name="email" value="{{ aluno.email }}"><br><br>
+        <label>Idade:</label><br>
+        <input type="number" name="idade" value="{{ aluno.idade }}"><br><br>
 
-        <label>Matrícula:</label><br>
-        <input type="text" name="matricula" value="{{ aluno.matricula }}"><br><br>
+        <label>Curso:</label><br>
+        <input type="text" name="curso" value="{{ aluno.curso }}"><br><br>
 
         <label>Cidade:</label><br>
         <input type="text" name="cidade" value="{{ aluno.cidade }}"><br><br>
