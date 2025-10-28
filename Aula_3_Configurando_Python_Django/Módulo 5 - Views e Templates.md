@@ -108,7 +108,7 @@ def listar_alunos(request):
     return render(request, 'alunos/listar.html', {'alunos': alunos})
 ```
 
-👉 Essa função busca todos os alunos no banco de dados e envia para o template `lista.html`.
+👉 Essa função busca todos os alunos no banco de dados e envia para o template `listar.html`.
 
 ---
 
