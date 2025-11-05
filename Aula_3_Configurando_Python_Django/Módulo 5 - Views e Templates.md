@@ -7,20 +7,19 @@
 Neste módulo, você vai aprender a:
 
 - Entender o papel das **views** e **templates** no Django  
-- Diferenciar **Function-Based Views (FBV)** e **Class-Based Views (CBV)**  
 - Criar páginas que exibem dados do banco de dados  
-- Cadastrar e editar alunos diretamente pelo site  
+- Cadastrar e editar alunos utilizando páginas próprias
 - Conectar tudo: **URLs → Views → Templates → Banco de Dados**
 
 ---
 
 ## 1. O que são Views?
 
-As **views** são responsáveis por decidir **o que aparece na tela** quando alguém acessa uma página.  
-Elas recebem a requisição, **pegam os dados do banco**, e enviam para o **template** (o HTML) que será mostrado ao usuário.
+- As **views** são responsáveis por decidir **o que aparece na tela** quando alguém acessa uma página.  
+- Elas recebem a requisição, **pegam os dados do banco**, e enviam para o **template** (o HTML) que será mostrado ao usuário.
   
 **Pense assim:**
-> A *View* é o cérebro da página.  
+> A *View* é o cérebro da página.
 > O *Template* é o rosto que o usuário vê.
 
 ---
@@ -34,13 +33,13 @@ No Django, existem dois tipos principais de views:
 | **FBV** | Function-Based View | Criadas com funções Python simples — ideais para aprender |
 | **CBV** | Class-Based View | Usam classes do Django para automatizar operações comuns |
 
-Neste curso, vamos **usar FBVs** (Function-Based Views), porque são mais simples e ajudam a entender o que está acontecendo por trás das cortinas.
+- Neste curso, vamos **usar FBVs** (Function-Based Views), porque são mais simples e ajudam a entender o que está acontecendo por trás das cortinas.
 
 ---
 
 ## 3. Relembrando o Model `Aluno`
 
-Vamos usar o mesmo modelo criado no Módulo 3:
+- Vamos usar o mesmo modelo criado no Módulo 3:
 
 ```python
 # alunos/models.py
@@ -56,14 +55,14 @@ class Aluno(models.Model):
         return self.nome
 ```
 
-Esse model já está migrado e registrado no `admin`.  
-Agora, vamos usá-lo nas **views e templates**.
+- Esse model já está migrado e registrado no `admin`.  
+- Agora, vamos usá-lo nas **views e templates**.
 
 ---
 
 ## 4. Criando as URLs
 
-Vamos criar um arquivo `urls.py` dentro do app `alunos` (caso ainda não exista):
+- Vamos criar um arquivo `urls.py` dentro do app `alunos` (caso ainda não exista):
 
 ```python
 # alunos/urls.py
@@ -77,7 +76,7 @@ urlpatterns = [
 ]
 ```
 
-E depois, no `urls.py` principal:
+- E depois, no `urls.py` principal:
 
 ```python
 # escola/urls.py
@@ -94,7 +93,7 @@ urlpatterns = [
 
 ## 5. Criando as Views
 
-Agora vamos criar as **views** em `alunos/views.py`.
+- Agora vamos criar as **views** em `alunos/views.py`.
 
 ### View 1: Listar Alunos
 
@@ -108,7 +107,7 @@ def listar_alunos(request):
     return render(request, 'alunos/listar.html', {'alunos': alunos})
 ```
 
-👉 Essa função busca todos os alunos no banco de dados e envia para o template `listar.html`.
+- Essa função busca todos os alunos no banco de dados e envia para o template `listar.html`.
 
 ---
 
@@ -133,8 +132,8 @@ def criar_aluno(request):
     return render(request, 'alunos/criar.html')
 ```
 
-👉 Essa view mostra o formulário (GET)  
-👉 E cadastra o aluno quando o formulário é enviado (POST)
+- Essa view mostra o formulário (GET)
+- E cadastra o aluno quando o formulário é enviado (POST)
 
 ---
 
@@ -159,7 +158,7 @@ def editar_aluno(request, id):
 
 ## 6. Criando as Pastas e Templates
 
-Crie dentro do app `alunos` a seguinte estrutura:
+- Crie dentro do app `alunos` a seguinte estrutura:
 
 ```
 alunos/
