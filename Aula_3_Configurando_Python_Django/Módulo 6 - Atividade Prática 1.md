@@ -29,11 +29,11 @@ Registre o model do Professor para que ele também apareça na tela de Admin do 
 5. Personalize a exibição da listagem, mostrando as colunas mais importantes (por exemplo: nome, e-mail e telefone).
 6. Adicione também um campo de busca, permitindo procurar professores pelo nome ou e-mail.
 
-## Passo 2 - Criando a Listagem, Cadastro e Edição públicos de Professores
+## Passo 2 - Criando a Listagem
 
 ### Descrição do problema
 
-A direção da escola pediu que o sistema apresente uma página simples com a lista de professores registrados, para cadastro de novos professores e edição de professores já cadastrados.
+A direção da escola pediu que o sistema apresente uma página simples com a lista de professores registrados.
 Essa página deve exibir informações básicas de cada professor, como nome, e-mail e telefone.
 
 **Você deverá criar:**
@@ -44,3 +44,28 @@ Essa página deve exibir informações básicas de cada professor, como nome, e-
 ## Orientações
 1. Seguir o tutorial 5.
 
+## Passo 3 – Cadastrando Professores
+
+### Descrição do problema
+O setor administrativo quer registrar novos professores sem precisar usar o admin do Django.  
+Você deve criar uma página com um formulário para inserir nome, e-mail, telefone, disciplina.
+
+### Orientações
+1. Crie uma view `cadastrar_professor`.
+2. Crie o template `professores/cadastrar.html` com um formulário HTML.
+3. O formulário deve enviar os dados via `POST` e conter `{% csrf_token %}`.
+4. Após o cadastro, redirecionar para a listagem de professores.
+
+---
+
+## Passo 4 – Editando Professores
+
+### Descrição do problema
+O setor administrativo pode precisar atualizar informações (como nome, email, telefone ou disciplina) de um professor cadastrado.
+
+### Orientações
+1. Crie uma view `editar_professor(request, id)`.
+2. Busque o professor pelo ID e mostre um formulário com os dados preenchidos.
+3. No `POST`, atualize os campos e salve.
+4. Redirecione o usuário para a listagem após salvar.
+5. Adicione um link “Editar” ao lado de cada professor na listagem.
