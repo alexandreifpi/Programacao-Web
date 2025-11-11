@@ -123,7 +123,7 @@ def criar_aluno(request):
 
         Aluno.objects.create(
             nome=nome,
-            email=email,
+            idade=idade,
             curso=curso,
             cidade=cidade
         )
