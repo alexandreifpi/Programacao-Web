@@ -13,18 +13,22 @@ Autenticação é o processo de **verificar a identidade do usuário**.
 É como a portaria de um prédio: antes de entrar, você precisa provar quem é.  
 No sistema, isso é feito normalmente através de:
 
-- nome de usuário ou e-mail  
-- senha  
-- (em sistemas mais avançados) tokens, autenticação social etc.
+- Nome de usuário ou e-mail  
+- Senha  
+- Em sistemas mais avançados: tokens, autenticação social, biometria, reconhecimento facial, etc.
+
+**Exemplo:**
+
+> No SUAP, para que você possa acessar sua conta, você precisa informar seu usuário e sua senha. Essa passo é a autenticação.
 
 No Django, a autenticação já vem pronta:
 
-- sistema de usuários
-- hashing seguro de senhas
-- funções de login e logout
-- middleware que reconhece o usuário logado
+- Sistema de usuários
+- Hashing seguro de senhas
+- Funções de login e logout
+- Middleware que reconhece o usuário logado
 
-Ou seja: você não precisa criar tudo isso manualmente — basta usar!
+Ou seja: você não precisa criar tudo isso manualmente, basta utilizar!
 
 ---
 
@@ -36,11 +40,11 @@ Depois que o sistema sabe **quem é o usuário**, vem a segunda pergunta:
 
 Autorização define **acessos** e **restrições**, como:
 
-- pode acessar determinada página?
-- pode criar novos registros?
-- pode editar alunos?
-- pode excluir professores?
-- pode apenas visualizar?
+- Pode acessar determinada página?
+- Pode criar novos registros?
+- Pode editar alunos?
+- Pode excluir professores?
+- Pode apenas visualizar?
 
 No Django, isso também é nativo:
 
@@ -62,14 +66,14 @@ Assim, você consegue controlar exatamente o que cada perfil pode acessar.
 
 ---
 
-## 🚀 Por que isso é importante?
+## Por que isso é importante?
 
 Porque garante que:
 
-- apenas pessoas autorizadas entram no sistema  
-- dados sensíveis fiquem protegidos  
-- diferentes usuários tenham acessos diferentes  
-- o sistema seja seguro e profissional  
+- Apenas pessoas autorizadas entram no sistema  
+- Dados sensíveis fiquem protegidos  
+- Diferentes usuários tenham acessos diferentes  
+- O sistema seja seguro e profissional  
 
 ---
 
@@ -89,9 +93,9 @@ Os alunos aprenderão a:
 
 ---
 
-## ✔️ 1) Criar o app `contas`
+## 1) Criar o app `contas`
 
-No terminal (na pasta do projeot, onde está o arquivo `manage.py`):
+No terminal (na pasta do projeto, onde está o arquivo `manage.py`):
 
 ```
 python manage.py startapp contas
@@ -99,7 +103,7 @@ python manage.py startapp contas
 
 ---
 
-## ✔️ 2) Configurar o app no `escola/settings.py`
+## 2) Configurar o app no `escola/settings.py`
 
 ### a) Adicione em `INSTALLED_APPS`:
 
@@ -127,7 +131,7 @@ LOGOUT_REDIRECT_URL = 'login'
 
 ---
 
-## ✔️ 3) Criar views: login, logout e home
+## 3) Criar views: login, logout e home
 
 Arquivo: `contas/views.py`
 
@@ -165,7 +169,7 @@ def home(request):
 
 ---
 
-## ✔️ 4) Criar URLs do app `contas`
+## 4) Criar URLs do app `contas`
 
 Arquivo: `contas/urls.py`
 
@@ -182,7 +186,7 @@ urlpatterns = [
 
 ---
 
-## ✔️ 5) Incluir URLs no arquivo principal do projeto
+## 5) Incluir URLs no arquivo principal do projeto
 
 Arquivo: `escola/urls.py`
 
@@ -204,7 +208,7 @@ urlpatterns = [
 
 ---
 
-## ✔️ 6) Criar templates (sem base.html)
+## 6) Criar templates
 
 Estrutura:
 
@@ -216,7 +220,7 @@ contas/
             home.html
 ```
 
-### 🟦 Template: `login.html`
+### Template: `login.html`
 
 ```html
 <!DOCTYPE html>
@@ -250,7 +254,7 @@ contas/
 </html>
 ```
 
-### 🟩 Template: `home.html`
+### Template: `home.html`
 
 ```html
 <!DOCTYPE html>
@@ -277,7 +281,7 @@ contas/
 
 ---
 
-## ✔️ 7) Proteger páginas de alunos e professores
+## 7) Proteger páginas de alunos e professores
 
 ### Alunos (`alunos/views.py`):
 
