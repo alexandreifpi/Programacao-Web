@@ -91,7 +91,7 @@ Os alunos aprenderão a:
 
 ## ✔️ 1) Criar o app `contas`
 
-No terminal (onde está `manage.py`):
+No terminal (na pasta do projeot, onde está o arquivo `manage.py`):
 
 ```
 python manage.py startapp contas
@@ -99,7 +99,7 @@ python manage.py startapp contas
 
 ---
 
-## ✔️ 2) Configurar o app no `settings.py`
+## ✔️ 2) Configurar o app no `escola/settings.py`
 
 ### a) Adicione em `INSTALLED_APPS`:
 
@@ -184,7 +184,7 @@ urlpatterns = [
 
 ## ✔️ 5) Incluir URLs no arquivo principal do projeto
 
-Arquivo: `seuprojeto/urls.py`
+Arquivo: `escola/urls.py`
 
 ```python
 from django.contrib import admin
@@ -286,8 +286,18 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def listar_alunos(request):
-    alunos = Aluno.objects.all()
-    return render(request, "alunos/listar.html", {"alunos": alunos})
+    ...
+    ...
+
+@login_required
+def criar_aluno(request):
+    ...
+    ...
+
+@login_required
+def editar_aluno(request):
+    ...
+    ...
 ```
 
 ### Professores (`professores/views.py`):
@@ -297,8 +307,18 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def listar_professores(request):
-    professores = Professor.objects.all()
-    return render(request, "professores/listar.html", {"professores": professores})
+    ...
+    ...
+
+@login_required
+def criar_professor(request):
+    ...
+    ...
+
+@login_required
+def editar_professor(request):
+    ...
+    ...
 ```
 
 ---
