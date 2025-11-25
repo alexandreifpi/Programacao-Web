@@ -1,5 +1,79 @@
 # Tutorial de Autenticação no Django
 
+## Introdução à Autenticação e Autorização no Django
+
+Ao construir uma aplicação web, normalmente queremos **controlar quem pode acessar o sistema** e **o que cada pessoa pode fazer dentro dele**. Para isso, dois conceitos fundamentais entram em cena:
+
+---
+
+## 1. Autenticação — *Quem é você?*
+
+Autenticação é o processo de **verificar a identidade do usuário**.
+
+É como a portaria de um prédio: antes de entrar, você precisa provar quem é.  
+No sistema, isso é feito normalmente através de:
+
+- nome de usuário ou e-mail  
+- senha  
+- (em sistemas mais avançados) tokens, autenticação social etc.
+
+No Django, a autenticação já vem pronta:
+
+- sistema de usuários
+- hashing seguro de senhas
+- funções de login e logout
+- middleware que reconhece o usuário logado
+
+Ou seja: você não precisa criar tudo isso manualmente — basta usar!
+
+---
+
+## 2. Autorização — *O que você pode fazer aqui?*
+
+Depois que o sistema sabe **quem é o usuário**, vem a segunda pergunta:
+
+> **“Quais ações essa pessoa tem permissão de realizar?”**
+
+Autorização define **acessos** e **restrições**, como:
+
+- pode acessar determinada página?
+- pode criar novos registros?
+- pode editar alunos?
+- pode excluir professores?
+- pode apenas visualizar?
+
+No Django, isso também é nativo:
+
+- Permissões padrão (`add`, `change`, `delete`, `view`)
+- Permissões customizadas
+- Grupos de usuários
+- Verificação de permissões em views
+
+Assim, você consegue controlar exatamente o que cada perfil pode acessar.
+
+---
+
+## 🎯 Resumindo
+
+| Conceito | Pergunta | Exemplo |
+|---|---|---|
+| **Autenticação** | “Quem é você?” | O usuário faz login no sistema |
+| **Autorização** | “O que você pode fazer?” | O sistema verifica se ele tem permissão para acessar determinada tela ou ação |
+
+---
+
+## 🚀 Por que isso é importante?
+
+Porque garante que:
+
+- apenas pessoas autorizadas entram no sistema  
+- dados sensíveis fiquem protegidos  
+- diferentes usuários tenham acessos diferentes  
+- o sistema seja seguro e profissional  
+
+---
+
+
 ## 🎯 Objetivo
 
 Adicionar login, logout e home protegida ao projeto que já contém os cadastros de **Alunos** e **Professores**.
