@@ -1,4 +1,4 @@
-[11:17, 26/11/2025] Alexandre: # TUTORIAL COMPLETO DE DJANGO REST FRAMEWORK
+# TUTORIAL COMPLETO DE DJANGO REST FRAMEWORK
 ## Do zero até criar uma API funcional para Alunos e Professores
 
 ---
