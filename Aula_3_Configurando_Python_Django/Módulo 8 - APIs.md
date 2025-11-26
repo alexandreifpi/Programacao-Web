@@ -30,17 +30,19 @@ O DRF facilita isso com:
 
 No terminal:
 
-bash
+```bash
 pip install djangorestframework
+```
 
 
 Depois no arquivo settings.py adicione:
 
-python
+```python
 INSTALLED_APPS = [
-    ...
+
     'rest_framework',
 ]
+```
 
 
 ---
@@ -49,18 +51,18 @@ INSTALLED_APPS = [
 
 Dentro do projeto que já tem *alunos* e *professores*, crie um novo app para a API:
 
-bash
-python manage.py startapp api
-
+```bash
+django-admin startapp api
+```
 
 Depois registre no *settings.py*:
 
-python
+```python
 INSTALLED_APPS = [
-    ...
+    
     'api',
 ]
-
+```
 
 ---
 
@@ -70,13 +72,11 @@ Os serializers transformam um *modelo Django → JSON*.
 
 Crie o arquivo:
 
-
-api/serializers.py
-
+> api/serializers.py
 
 E coloque:
 
-python
+```python
 from rest_framework import serializers
 from alunos.models import Aluno
 from professores.models import Professor
@@ -90,21 +90,19 @@ class ProfessorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Professor
         fields = '__all__'
-
-
+```
 ---
 
 ## 5. Criando as API Views
 
 Crie o arquivo:
 
-
-api/views.py
+> api/views.py
 
 
 E coloque:
 
-python
+```python
 from rest_framework import generics
 from alunos.models import Aluno
 from professores.models import Professor
@@ -127,7 +125,7 @@ class ProfessorListCreate(generics.ListCreateAPIView):
 class ProfessorDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Professor.objects.all()
     serializer_class = ProfessorSerializer
-
+```
 
 Essas classes automaticamente implementam:
 
@@ -143,13 +141,11 @@ Ou seja: *CRUD completo sem esforço*.
 
 Crie o arquivo:
 
-
-api/urls.py
-
+> api/urls.py
 
 E coloque:
 
-python
+```python
 from django.urls import path
 from .views import (
     AlunoListCreate, AlunoDetail,
@@ -163,13 +159,13 @@ urlpatterns = [
     path('professores/', ProfessorListCreate.as_view()),
     path('professores/<int:pk>/', ProfessorDetail.as_view()),
 ]
-
+```
 
 Agora incluímos no *urls.py principal*:
 
-python
+```python
 path('api/', include('api.urls')),
-
+```
 
 ---
 
@@ -187,13 +183,13 @@ POST http://localhost:8000/api/alunos/
 
 Exemplo JSON:
 
-json
+```json
 {
     "nome": "Maria",
     "cidade": "São Paulo",
     "idade": 20
 }
-
+```
 
 ### Detalhar aluno
 
@@ -220,13 +216,13 @@ Para exigir login na API:
 
 No *settings.py*:
 
-python
+```python
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated'
     ]
 }
-
+```
 
 Agora só usuários logados acessam os endpoints.
 
