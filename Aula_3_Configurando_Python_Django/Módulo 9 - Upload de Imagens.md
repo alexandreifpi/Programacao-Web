@@ -100,3 +100,54 @@ No arquivo `alunos/templates/alunos/editar.html` você deverá inserir o seguint
 <label>Imagem:</label><br><br>
 <input type="file" name="imagem" accept=".png">
 ```
+
+### 4.3. Ajustando o template listar.html
+
+No arquivo `aluno/templates/alunos/listar.html` você irá adicionar o seguinte código `html` dentro do `for`:
+
+``` html
+{% if aluno.imagem %}
+    <img src="{{ aluno.imagem.url }}" class="aluno-foto">
+{% endif %}
+```
+
+## 5. Ajustando nossas views
+
+### 5.1. Ajustando nossa view de criação
+
+Na função `def criar_aluno(request):` do nosso arquivo `alunos/views.py` você irá inserir o seguinte código abaixo do `curso = request.POST.get('curso')`
+
+``` python
+imagem = request.FILES.get('imagem')
+```
+
+E onde tem o seguinte código:
+
+``` python
+Aluno.objects.create(
+    nome=nome,
+    idade=idade,
+    curso=curso,
+    cidade=cidade
+)
+```
+
+Você deve substituir por:
+
+``` python
+Aluno.objects.create(
+    nome=nome,
+    idade=idade,
+    curso=curso,
+    cidade=cidade,
+    imagem=imagem
+)
+```
+
+### 5.2. Ajustando nossa view de edição
+
+Na função `def editar_aluno(request, id):` do nosso arquivo `alunos/views.py` você irá inserir o seguinte código abaixo do `aluno.curso = request.POST.get('curso')`
+
+``` python
+aluno.imagem = request.FILES.get('imagem')
+```
