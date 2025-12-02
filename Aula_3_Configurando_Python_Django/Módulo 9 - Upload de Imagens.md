@@ -39,8 +39,64 @@ if settings.DEBUG:
 
 ## 3. Adicionando o campo no models de aluno
 
+### 3.1. Adicionando biblioteca para trabalhar com imagens no Django
+
+``` bash
+pip install Pillow
+```
+
+### 3.2. Adicionando o campo de imagem no models
+
 Abra o arquivo `alunos/models.py` e na `class Aluno` insira o novo atributo que será responsável por armazenar a foto dos alunos:
 
 ``` python
 imagem = models.ImageField(upload_to='fotos/', null=True)
+```
+
+### 3.3. Rodando as migrações
+
+Agora, devemos executar as migrações para criarmos o novo campo no nosso banco de dados:
+
+- Comando para criar as migrações
+``` bash
+python manage.py makemigrations
+```
+
+- Comando para executar as migrações
+``` bash
+python manage.py migrate
+```
+
+------------------------------------------------------------------------
+
+## 4. Ajustando nossos templates
+
+### 4.1. Ajustando o template criar.html
+
+Na tag `form` do arquivo `alunos/templates/alunos/criar.html` você irá adicionar o código `enctype="multipart/form-data"`, esse código serve para informar que o formulário irá trabalhar com arquivos de mídia.
+
+``` html
+<form method="POST" enctype="multipart/form-data">
+```
+
+No arquivo `alunos/templates/alunos/criar.html` você deverá inserir o seguinte código `html` abaixo do input de curso. Esse código serve para criar o campo em que iremos fazer o upload da imagem.
+
+``` html
+<label>Imagem:</label><br><br>
+<input type="file" name="imagem" accept=".png">
+```
+
+### 4.2. Ajustando o template editar.html
+
+Na tag `form` do arquivo `alunos/templates/alunos/criar.html` você irá adicionar o código `enctype="multipart/form-data"`, esse código serve para informar que o formulário irá trabalhar com arquivos de mídia.
+
+``` html
+<form method="POST" enctype="multipart/form-data">
+```
+
+No arquivo `alunos/templates/alunos/editar.html` você deverá inserir o seguinte código `html` abaixo do input de curso. Esse código serve para criar o campo em que iremos fazer o upload da imagem.
+
+``` html
+<label>Imagem:</label><br><br>
+<input type="file" name="imagem" accept=".png">
 ```
