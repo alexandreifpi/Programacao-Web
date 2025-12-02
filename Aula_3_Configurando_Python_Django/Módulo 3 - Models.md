@@ -84,10 +84,10 @@ aluno.save()
 ```
 projeto_escola/
 ├── alunos/
-│   ├── models.py
-│   ├── views.py
-│   ├── urls.py
-│   └── templates/
+   ├── models.py
+   ├── views.py
+   ├── urls.py
+   └── templates/
 ```
 
 2. Adicione o seguinte código:
